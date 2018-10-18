@@ -24,4 +24,7 @@ public abstract class Character {
     public void setGold(int gold) {
         this.gold = gold;
     }
+
+    public abstract double defence();
+    public abstract void attack(Character character);
 }

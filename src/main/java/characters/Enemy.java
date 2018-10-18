@@ -1,17 +1,32 @@
 package characters;
 
 import characters.Character;
+import items.Weapon;
 
-public abstract class Enemy extends Character {
+public class Enemy extends Character {
 
     private EnemyType type;
+    private Weapon weapon;
 
-    public Enemy(int hp, int gold, EnemyType type) {
-        super(hp, gold);
+    public Enemy(EnemyType type, Weapon weapon) {
+        super(type.getHp(), type.getGold());
         this.type = type;
+        this.weapon = weapon;
     }
 
     public EnemyType getType() {
         return type;
+    }
+
+    public void attack(Player player) {
+        int playerHp = player.getHp();
+        double playerDefence = player.defence();
+        int damage = weapon.getDamage() * playerDefence;
+        player.setHp(playerHp - damage);
+    }
+
+    @Override
+    public double defence() {
+        return 1.0;
     }
 }
