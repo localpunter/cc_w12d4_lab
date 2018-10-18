@@ -1,3 +1,7 @@
+package characters;
+
+import characters.Character;
+
 public abstract class Player extends Character {
 
     private PlayerType type;
