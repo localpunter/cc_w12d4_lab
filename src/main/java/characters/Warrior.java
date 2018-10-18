@@ -39,7 +39,7 @@ public class Warrior extends Player {
     public void attack(Character character) {
         int charHp = character.getHp();
         double playerDefence = character.defence();
-        int damage = weapon.getDamage() * playerDefence;
+        int damage = (int) (weapon.getDamage() * playerDefence);
         character.setHp(charHp - damage);
     }
 

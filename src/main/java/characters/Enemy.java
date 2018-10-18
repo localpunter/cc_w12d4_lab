@@ -21,8 +21,15 @@ public class Enemy extends Character {
     public void attack(Player player) {
         int playerHp = player.getHp();
         double playerDefence = player.defence();
-        int damage = weapon.getDamage() * playerDefence;
+        int damage = (int) (weapon.getDamage() * playerDefence);
         player.setHp(playerHp - damage);
+    }
+
+    public void attack(Character character) {
+        int charHp = character.getHp();
+        double playerDefence = character.defence();
+        int damage = (int) (weapon.getDamage() * playerDefence);
+        character.setHp(charHp - damage);
     }
 
     @Override

@@ -38,7 +38,7 @@ public class Magic extends Player {
     public void attack(Character character) {
         int charHp = character.getHp();
         double playerDefence = character.defence();
-        int damage = spell.getDamage() * playerDefence;
+        int damage = (int) (spell.getDamage() * playerDefence);
         character.setHp(charHp - damage);
     }
 
