@@ -1,6 +1,6 @@
 package items;
 
-public class Weapon implements IAttack {
+public class Weapon implements IAttack, ILootable {
     WeaponType type;
 
     public Weapon(WeaponType type) {

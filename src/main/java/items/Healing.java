@@ -1,6 +1,6 @@
 package items;
 
-public class Healing implements IHeal {
+public class Healing implements IHeal, ILootable {
     HealingType type;
 
     public Healing(HealingType type) {

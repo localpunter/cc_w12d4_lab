@@ -1,6 +1,6 @@
 package items;
 
-public class Armour implements IDefend {
+public class Armour implements IDefend, ILootable {
 
     ArmourType type;
 
