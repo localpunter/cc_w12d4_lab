@@ -8,6 +8,10 @@ public class Armour implements IDefend {
         this.type = type;
     }
 
+    public ArmourType getType() {
+        return type;
+    }
+
     @Override
     public double getDefence() {
         return type.getDefence();

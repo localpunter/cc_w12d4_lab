@@ -7,8 +7,12 @@ public class Weapon implements IAttack {
         this.type = type;
     }
 
+    public WeaponType getType() {
+        return type;
+    }
+
     @Override
-    public double getDamage() {
+    public int getDamage() {
         return type.getDamage();
     }
 }

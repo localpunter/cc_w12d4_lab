@@ -8,6 +8,10 @@ public class Familiar implements IDefend {
         this.type = type;
     }
 
+    public FamiliarType getType() {
+        return type;
+    }
+
     @Override
     public double getDefence() {
         return type.getDefence();

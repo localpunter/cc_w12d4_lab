@@ -7,8 +7,12 @@ public class Spell implements IAttack {
         this.type = type;
     }
 
+    public SpellType getType() {
+        return type;
+    }
+
     @Override
-    public double getDamage() {
+    public int getDamage() {
         return type.getDamage();
     }
 }

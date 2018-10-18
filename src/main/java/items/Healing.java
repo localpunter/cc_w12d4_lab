@@ -7,6 +7,10 @@ public class Healing implements IHeal {
         this.type = type;
     }
 
+    public HealingType getType() {
+        return type;
+    }
+
     @Override
     public int getHp() {
         return type.getHp();

@@ -1,5 +1,5 @@
 package items;
 
 public interface IAttack {
-    double getDamage();
+    int getDamage();
 }
